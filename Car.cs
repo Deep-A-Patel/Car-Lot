@@ -4,8 +4,9 @@ namespace ClassIntro
 
 
 {
-    internal class car
+    public class car
     {
+        private int _miles = 0;
         public int Year { get; set; }
 
         public string Model { get; set; }
@@ -29,7 +30,9 @@ namespace ClassIntro
 
         public void Drive(int miles)
         {
+            _miles += miles;
             Console.WriteLine($"{Make} is driving for the model {Model}");
+            Console.WriteLine($"Your odometer is now at {_miles}");
         }
     }
 }
